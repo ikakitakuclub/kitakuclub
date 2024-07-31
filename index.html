@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伊川谷キタク部</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            overflow-x: hidden;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 10px 0;
+        }
+        .nav-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .nav-logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #1d1d1f;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #0071e3;
+        }
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+            overflow: hidden;
+            background-color: white;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #0071e3;
+            color: white;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0071e3;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #2085f4;
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .feature {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .feature-text {
+            flex: 1;
+            text-align: left;
+            padding: 0 20px;
+        }
+        .feature-image {
+            flex: 1;
+            padding: 0 20px;
+        }
+        .feature h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .feature p {
+            font-size: 21px;
+            color: #86868b;
+        }
+        .feature-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            .nav-links a:not(.cta-button) {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 20px;
+            }
+            .feature {
+                flex-direction: column;
+            }
+            .feature-text, .feature-image {
+                text-align: center;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="nav-logo">伊川谷キタク部</div>
+            <div class="nav-links">
+                <a href="#about">概要</a>
+                <a href="#features">Blog</a>
+                <a href="#join">入部</a>
+                <a href="blog\apology_chat.html" class="cta-button">部内専用チャット</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <video class="video-background" autoplay loop muted>
+            <source src="2023-03-02 16-00-34_Trim.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>帰宅部</h1>
+            <p>自由な時間を大切に。あなたらしい放課後を。</p>
+            <a href="#join" class="cta-button">入部する</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="feature">
+            <div class="feature-text">
+                <h2>自由な時間、無限の可能性。</h2>
+                <p>帰宅部では、放課後の時間をあなた自身のために使えます。趣味を極める、新しいことに挑戦する、ゆっくり休む。すべてはあなた次第です。</p>
+                <a href="about.html" class="cta-button">詳しくはこちら</a>
+            </div>
+            <div class="feature-image">
+                <img src="ダウンロード (1).png" alt="自由な時間のイメージ">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="feature">
+            <div class="feature-image">
+                <img src="/api/placeholder/500/300" alt="活動イメージ">
+            </div>
+            <div class="feature-text">
+                <h2>多彩な活動、つながる仲間。</h2>
+                <p>帰宅の極意伝授、ミーティング、多くの人とつながり、多くのものを見て過ごす、帰宅部の色を映し出す</p>
+                <a href="blog/Blog.html" class="cta-button">Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="section">
+        <div class="feature">
+            <div class="feature-text">
+                <h2>さあ、はじめよう。</h2>
+                <p>帰宅部への入部は簡単。興味があれば、いつでも参加できます。新しい仲間を待っています。</p>
+                <a href="forms.html" class="cta-button">入部申請はこちら</a>
+            </div>
+            <div class="feature-image">
+                <img src="/api/placeholder/500/300" alt="入部イメージ">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            document.querySelectorAll('.feature').forEach(feature => {
+                if (isElementInViewport(feature)) {
+                    feature.style.opacity = '1';
+                    feature.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+
+        function adjustNavigation() {
+            const navLinks = document.querySelector('.nav-links');
+            const logo = document.querySelector('.nav-logo');
+            const ctaButton = document.querySelector('.cta-button');
+
+            if (window.innerWidth <= 768) {
+                navLinks.innerHTML = '';
+                navLinks.appendChild(ctaButton);
+            } else {
+                const originalLinks = `
+                    <a href="#about">概要</a>
+                    <a href="#features">Blog</a>
+                    <a href="#join">入部</a>
+                `;
+                navLinks.innerHTML = originalLinks;
+                navLinks.appendChild(ctaButton);
+            }
+        }
+
+        window.addEventListener('load', adjustNavigation);
+        window.addEventListener('resize', adjustNavigation);
+    </script>
+</body>
+</html>

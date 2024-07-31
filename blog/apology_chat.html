@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キタク部 - 部内専用チャットについてのお知らせ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #0071e3;
+            margin-bottom: 20px;
+        }
+        .message-container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .ceo-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .ceo-info {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+        .ceo-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .ceo-title {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .message-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .highlight {
+            background: linear-gradient(transparent 60%, #FFD700 60%);
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .message-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .ceo-image {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 10px;
+            }
+            .message-content {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>部内専用チャットについてのお知らせ</h1>
+        </header>
+
+        <div class="message-container">
+            <div class="message-header">
+                <img src="image\yasumasa.jpg" alt="副部長" class="ceo-image">
+                <div class="ceo-info">
+                    <h2 class="ceo-name">川上 泰正</h2>
+                    <p class="ceo-title">伊川谷キタク部 副部長 & システムエンジニア</p>
+                </div>
+            </div>
+
+            <div class="message-content">
+                <p>
+                    皆様へ、<br><br>
+                    伊川谷キタク部のシステムエンジニアの川上泰正です。当帰宅部に入部された場合、部員全員が、自由にコミュニケーションを取れるように作成した、部内専用チャットがあるのですが、只今、<span class="highlight">重大なセキュリティ上の問題</span>を発見したため、早急な対応を行うため、アクセスできないようになっています。
+                </p>
+                <p>
+                    部内専用チャットの現状としましては、部内専用チャットのデータベースサーバに誰でもアクセスすることができるような状態になっていまして、セキュリティ上また、プライバシーの観点より、部内専用チャットの全システムを只今停止している次第です。 
+                    <br>現在のところ、部内専用チャットは、正式リリースを行ってはおらず、私の情報しか、データベースサーバには保存していません。また、データベースサーバへの不正アクセスまた、機密情報の漏洩は現在確認されていないため、<span class="highlight">皆様には、安心して、帰宅部の活動を続けいただけます。</span> 
+                </p>
+                <p>
+                    また、新しく入部申請される方、そして、もう既に部員である方の、情報に関しましては、部内専用チャットの使用しているシステムとは、違うシステムを使用しており、かつ、保存しているデータベースも違うため、<span class="highlight">安心していただいて大丈夫です。</span> 
+                </p>
+                <p>
+                    この度は、部内専用チャットのリリースが遅れていること、セキュリティ上に大きな問題があったことに関しまして、誠に申し訳ございません。
+                    <br>正式なリリースの日時についてはまだ不明なため、後々情報を提供したいと考えています。
+                    <br>その間、部内専用チャットはございませんが、帰宅部の他の活動に関しては、変わりはありませんので、ぜひ活動を楽しんでください。
+                </p>
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>

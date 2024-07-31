@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伊川谷キタク部 - 入部申請フォーム</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        button {
+            background-color: #0071e3;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2085f4;
+        }
+        .required::after {
+            content: "*";
+            color: red;
+            margin-left: 3px;
+        }
+        button:disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
+        .checkbox-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .checkbox-container label {
+            margin-bottom: 5px;
+        }
+        .checkbox-container input {
+            margin-top: 5px;
+        }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1>伊川谷キタク部 入部申請フォーム</h1>
+        <h3>※このformを送信しますと、自動的に入力されたメールアドレス宛に入部完了と部内専用チャットへの登録のお知らせが届きます</h3>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd4VzOFM93ZdoGOgiL6RAr77fNjlApPaN_-a9Silleomx_ojA/formResponse">
+            <label for="text" class="required">氏名</label>
+            <input type="text" id="text" name="entry.1704646892">
+            
+            <label for="grade" class="required">学年</label>
+            <input id="grade" name="entry.1685596406" required>
+            
+            <label for="text">クラス</label>
+            <input type="text" id="text" name="entry.743919051">
+            
+            <label for="email">メールアドレス</label>
+            <input id="email" type="text" name="entry.2021492984" placeholder="example@mail.co.jp">
+            
+            <label for="reason" class="required">入部理由</label>
+            <input id="reason" name="entry.457880942" required>
+
+            <div class="checkbox-container">
+                <label for="agreeCheckbox">私は<a href="policy.html">利用規約</a>に同意します</label>
+                <input type="checkbox" id="agreeCheckbox">
+            </div>
+            <button type="submit" id="submitButton" value="送信" disabled>送信する</button>        
+        </form>
+    </div>
+
+    <script>
+        const checkbox = document.getElementById('agreeCheckbox');
+        const submitButton = document.getElementById('submitButton');
+
+        checkbox.addEventListener('change', function() {
+            submitButton.disabled = !this.checked;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キタク部ブログ</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            width: 100%;
+        }
+        nav {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #1d1d1f;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        main {
+            max-width: 980px;
+            margin: 80px auto 0;
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 4vw;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 2vw;
+            font-weight: 400;
+            color: #86868b;
+        }
+        .blog-post {
+            background-color: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .blog-post:hover {
+            transform: scale(1.02);
+        }
+        .blog-post img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 20px;
+        }
+        .blog-content h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .blog-content p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #515154;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0071e3;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 980px;
+            text-decoration: none;
+            font-weight: 400;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #0077ed;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero h1 {
+                font-size: 8vw;
+            }
+            .hero .subtitle {
+                font-size: 4vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">キタク部ブログ</a>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>部活動の魅力を発信</h1>
+            <p class="subtitle">日々の活動や成果をみんなで共有しよう</p>
+        </section>
+        <section class="blog-posts">
+            <article class="blog-post">
+                <div class="blog-content">
+                    <h2>代表メッセージ</h2>
+                    <p>部長、副部長メッセージ</p>
+                    <a href="blog-1.html" class="cta-button">続きを読む</a>
+                </div>
+            </article>
+        </section>
+        <section class="blog-posts">
+            <article class="blog-post">
+                <div class="blog-content">
+                    <h2>部内専用チャットについてのお知らせ</h2>
+                    <p>部内専用チャットの現状とこれからについて</p>
+                    <a href="apology_chat.html" class="cta-button">続きを読む</a>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
