@@ -156,6 +156,11 @@
             font-size: 1rem;
             color: #86868b;
         }
+        #join {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
         
         @media (min-width: 768px) {
             .feature {
@@ -288,16 +293,16 @@
                 rect.right <= (window.innerWidth || document.documentElement.clientWidth)
             );
         }
-
+    
         function handleScroll() {
-            document.querySelectorAll('.feature').forEach(feature => {
-                if (isElementInViewport(feature)) {
-                    feature.style.opacity = '1';
-                    feature.style.transform = 'translateY(0)';
+            document.querySelectorAll('.feature, #join').forEach(element => {
+                if (isElementInViewport(element)) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
                 }
             });
         }
-
+    
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('load', handleScroll);
     </script>
