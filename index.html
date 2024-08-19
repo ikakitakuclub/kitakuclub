@@ -131,14 +131,14 @@
             height: auto;
         }
 
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .feature {
-                flex-direction: row;
-            }
-            .feature-text {
-                margin-bottom: 0;
+                opacity: 1;
+                transform: translateY(0);
+                transition: none;
             }
         }
+
 
         @media (max-width: 768px) {
             .nav-links a {
@@ -178,7 +178,7 @@
 
     <section class="hero">
         <video class="video-background" autoplay loop muted>
-            <source src="2023-03-02 16-00-34_Trim.mp4" type="video/mp4">
+            <source src="image\kitakuclub_offical.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <h1>帰宅部</h1>
@@ -240,16 +240,24 @@
         }
     
         function handleScroll() {
-            document.querySelectorAll('.feature').forEach(feature => {
-                if (isElementInViewport(feature)) {
+            if (window.innerWidth > 768) { // パソコンやタブレットではスクロールアニメーションを有効
+                document.querySelectorAll('.feature').forEach(feature => {
+                    if (isElementInViewport(feature)) {
+                        feature.style.opacity = '1';
+                        feature.style.transform = 'translateY(0)';
+                    }
+                });
+            } else { // モバイルデバイスではアニメーションを無効化
+                document.querySelectorAll('.feature').forEach(feature => {
                     feature.style.opacity = '1';
                     feature.style.transform = 'translateY(0)';
-                }
-            });
+                });
+            }
         }
-    
+
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('load', handleScroll);
+
     
         function adjustNavigation() {
             const navLinks = document.querySelector('.nav-links');
