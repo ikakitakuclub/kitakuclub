@@ -130,6 +130,16 @@
             max-width: 100%;
             height: auto;
         }
+
+        @media (min-width: 768px) {
+            .feature {
+                flex-direction: row;
+            }
+            .feature-text {
+                margin-bottom: 0;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links a {
                 font-size: 12px; /* 必要に応じて文字サイズを調整 */
